@@ -1,15 +1,15 @@
 # Angular CLI Builders
 
-多くのAngular CLIコマンドは、リンティング、ビルド、テストなど、コード上で複雑なプロセスを実行します。
-コマンドはArchitectと呼ばれる内部ツールを使用して*CLI builders*を実行し、別のツールを適用して目的のタスクを実行します。
+A number of Angular CLI commands run a complex process on your code, such as linting, building, or testing.
+The commands use an internal tool called Architect to run *CLI builders*, which apply another tool to accomplish the desired task.
 
-Angularバージョン8では、CLI Builder APIは安定しており、コマンドを追加または変更してAngular CLIをカスタマイズしたい開発者が利用できます。たとえば、まったく新しいタスクを実行したり、既存のコマンドで使用するサードパーティツールを変更したりするためのビルダーを提供できます。
+With Angular version 8, the CLI Builder API is stable and available to developers who want to customize the Angular CLI by adding or modifying commands. For example, you could supply a builder to perform an entirely new task, or to change which third-party tool is used by an existing command.
 
-このドキュメントでは、CLI builders がワークスペース構成ファイルとどのように統合されるかを説明し、独自のBuilderを作成する方法を示します。
+This document explains how CLI builders integrate with the workspace configuration file, and shows how you can create your own builder.
 
 <div class="alert is-helpful">
 
-   ここで使用されているサンプルコードは、[このGitHubリポジトリ]（https://github.com/mgechev/cli-builders-demo）にあります。
+   You can find the code from the examples used here in [this GitHub repository](https://github.com/mgechev/cli-builders-demo).
 
 </div>
 
